@@ -71,6 +71,7 @@ async def save_pdf(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 def extract_score(result_text):
+    """Pull the numeric ATS score out of the formatted result text."""
     match = re.search(r"ATS Score:\s*(\d+)\s*%", result_text)
     if match:
         return int(match.group(1))
@@ -149,20 +150,7 @@ def main():
 
     print("Bot Running...")
 
-    PORT = int(os.environ.get("PORT", 8443))
-    RENDER_URL = os.environ.get("RENDER_EXTERNAL_URL")
-
-    if RENDER_URL:
-        # Webhook mode (used when deployed on Render)
-        app.run_webhook(
-            listen="0.0.0.0",
-            port=PORT,
-            url_path=BOT_TOKEN,
-            webhook_url=f"{RENDER_URL}/{BOT_TOKEN}",
-        )
-    else:
-        # Polling mode (used when running locally)
-        app.run_polling()
+    app.run_polling()
 
 
 if __name__ == "__main__":

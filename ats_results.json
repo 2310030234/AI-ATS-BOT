@@ -1,18 +1,18 @@
 {
   "2310030226_Varshitha.pdf": {
-    "score": 82,
-    "full_result": "🏆 ATS Score: 82%\n\n🟢 Hiring Decision:\nStrong Hire\n\n✅ Matching Skills\n- Python\n- SQL (MySQL)\n- MongoDB\n- REST API\n- Git\n- Problem Solving\n- Teamwork\n- AWS\n- CI/CD\n\n❌ Missing Skills\n- Flask\n- Docker\n\n💡 Suggestions\n- Add Flask framework experience to backend development skills\n- Include Docker containerization knowledge or projects\n- Highlight specific Flask REST API projects in portfolio\n- Mention any Docker usage in CI/CD pipelines or deployments"
+    "score": 88,
+    "full_result": "🏆 ATS Score: 88%\n\n🟢 Hiring Decision:\nStrong Hire\n\n✅ Matching Skills\n- Python\n- REST API\n- MongoDB\n- Git\n- SQL (MySQL)\n- AWS\n- CI/CD\n- Problem Solving\n- Teamwork\n\n❌ Missing Skills\n- Flask\n- Docker\n\n💡 Suggestions\n- Add Flask framework experience or highlight any micro-framework work in projects\n- Include Docker/containerization experience or mention willingness to learn\n- Explicitly list \"Flask\" and \"Docker\" in Technical Skills section\n- Quantify teamwork impact in leadership roles with metrics"
   },
   "2310030234-Uppalapati Yuktha Siri (5).pdf": {
-    "score": 70,
-    "full_result": "🏆 ATS Score: 70%\n\n🟢 Hiring Decision:\nConsider\n\n✅ Matching Skills\n- Python\n- Flask\n- SQL (MySQL)\n- MongoDB\n- REST API\n- AWS (Preferred)\n\n❌ Missing Skills\n- Git\n- Docker\n- CI/CD\n- Problem Solving (explicit)\n- Teamwork (explicit)\n\n💡 Suggestions\n- Add Git version control experience to skills and project descriptions\n- Include Docker and CI/CD pipeline experience or relevant coursework\n- Highlight specific problem-solving examples and teamwork experiences in projects\n- Mention any collaborative development practices used in academic projects"
+    "score": 72,
+    "full_result": "🏆 ATS Score: 72%\n\n🟢 Hiring Decision:\nConsider\n\n✅ Matching Skills\n- Python\n- Flask\n- SQL (MySQL)\n- MongoDB\n- REST API\n- AWS\n\n❌ Missing Skills\n- Git\n- Docker\n- CI/CD\n- Problem Solving (explicit)\n- Teamwork (explicit)\n\n💡 Suggestions\n- Add Git version control experience to skills and project descriptions\n- Include Docker containerization knowledge or projects\n- Mention CI/CD pipeline experience (GitHub Actions, Jenkins, etc.)\n- Explicitly highlight problem-solving examples in project bullets\n- Showcase teamwork/collaboration experiences in projects or activities"
   },
   "Varsha.pdf": {
-    "score": 75,
-    "full_result": "🏆 ATS Score: 75%\n\n🟢 Hiring Decision:\nConsider\n\n✅ Matching Skills\n- Python\n- MongoDB\n- REST API\n- Git\n- Problem Solving\n- SQL\n- AWS\n\n❌ Missing Skills\n- Flask\n- Docker\n- CI/CD\n- Teamwork\n\n💡 Suggestions\n- Add Flask experience or highlight FastAPI as equivalent modern Python framework\n- Include Docker and CI/CD pipeline experience in projects or skills\n- Explicitly mention teamwork and collaboration experiences\n- Consider adding a dedicated \"Team Projects\" section to showcase collaborative work"
+    "score": 82,
+    "full_result": "🏆 ATS Score: 82%\n\n🟢 Hiring Decision:\nConsider\n\n✅ Matching Skills\n- Python\n- MongoDB\n- REST API\n- Git\n- Problem Solving\n- Teamwork\n- SQL\n- AWS\n\n❌ Missing Skills\n- Flask\n- Docker\n- CI/CD\n\n💡 Suggestions\n- Add Flask framework experience or highlight transferable FastAPI skills for Flask adaptation\n- Include Docker containerization experience in projects or certifications\n- Add CI/CD pipeline implementation (GitHub Actions, Jenkins, or similar) to demonstrate deployment automation"
   },
   "yukthasiriuppalapati (1).pdf": {
     "score": 78,
-    "full_result": "🏆 ATS Score: 78%\n\n🟢 Hiring Decision:\nConsider\n\n✅ Matching Skills\n- Python\n- Flask\n- SQL (MySQL)\n- MongoDB\n- REST API\n- Problem Solving\n- AWS\n\n❌ Missing Skills\n- Git\n- Teamwork\n- Docker\n- CI/CD\n\n💡 Suggestions\n- Add Git/GitHub version control experience to your skills and project descriptions\n- Highlight collaborative experiences or team projects to demonstrate teamwork\n- Include Docker containerization and CI/CD pipeline knowledge to match preferred qualifications\n- Explicitly mention REST API design and implementation in project details"
+    "full_result": "🏆 ATS Score: 78%\n\n🟢 Hiring Decision:\nConsider\n\n✅ Matching Skills\n- Python\n- Flask\n- SQL (MySQL)\n- MongoDB\n- REST API\n- Problem Solving\n- AWS (Certified Cloud Practitioner)\n\n❌ Missing Skills\n- Git\n- Docker\n- CI/CD\n- Teamwork (not explicitly demonstrated)\n\n💡 Suggestions\n- Add Git version control experience to skills and project descriptions\n- Include Docker containerization knowledge or projects\n- Mention CI/CD pipeline experience or willingness to learn\n- Highlight teamwork examples from academic projects or collaborations\n- Explicitly list REST API design experience in skills section"
   }
 }

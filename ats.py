@@ -37,20 +37,29 @@ Resume:
 {resume}
 """
 
-    response = client.chat.completions.create(
-        model="nvidia/nemotron-3-ultra-550b-a55b:free",
-        messages=[
-            {
-                "role": "system",
-                "content": "You are an ATS Resume Analyzer. You output ONLY the final formatted result, never your reasoning or intermediate steps."
-            },
-            {
-                "role": "user",
-                "content": prompt
-            }
-        ],
-        temperature=0.2,
-        max_tokens=2000,
-    )
+    try:
+        response = client.chat.completions.create(
+            model="nvidia/nemotron-3-ultra-550b-a55b:free",
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You are an ATS Resume Analyzer. You output ONLY the final formatted result, never your reasoning or intermediate steps."
+                },
+                {
+                    "role": "user",
+                    "content": prompt
+                }
+            ],
+            temperature=0.2,
+            max_tokens=2000,
+        )
 
-    return response.choices[0].message.content
+        if not response or not response.choices:
+            print(f"[ats.py] Empty response from API: {response}")
+            return "⚠️ ATS analysis failed for this resume (no response from AI model). Please try /analyze again."
+
+        return response.choices[0].message.content
+
+    except Exception as e:
+        print(f"[ats.py error] {e}")
+        return "⚠️ ATS analysis failed for this resume due to an error. Please try /analyze again."

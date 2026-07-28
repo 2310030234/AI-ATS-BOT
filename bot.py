@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import shutil
 from telegram import Update
 from telegram.ext import (
     Application,
@@ -33,6 +34,7 @@ Upload MULTIPLE Resume PDFs
 Commands:
 /start
 /analyze
+/reset - clear old files before a new session
 
 You can also ask:
 
@@ -41,6 +43,20 @@ Who knows Python?
 Who has AWS?
 """
     )
+
+
+async def reset(update: Update, context: ContextTypes.DEFAULT_TYPE):
+
+    shutil.rmtree(JD_FOLDER, ignore_errors=True)
+    shutil.rmtree(RESUME_FOLDER, ignore_errors=True)
+
+    os.makedirs(JD_FOLDER, exist_ok=True)
+    os.makedirs(RESUME_FOLDER, exist_ok=True)
+
+    if os.path.exists("ats_results.json"):
+        os.remove("ats_results.json")
+
+    await update.message.reply_text("🗑️ Cleared all uploaded files and previous results. Ready for a new session.")
 
 
 async def save_pdf(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -71,7 +87,6 @@ async def save_pdf(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 def extract_score(result_text):
-    """Pull the numeric ATS score out of the formatted result text."""
     match = re.search(r"ATS Score:\s*(\d+)\s*%", result_text)
     if match:
         return int(match.group(1))
@@ -133,6 +148,7 @@ def main():
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("analyze", analyze))
+    app.add_handler(CommandHandler("reset", reset))
 
     app.add_handler(
         MessageHandler(
@@ -150,7 +166,20 @@ def main():
 
     print("Bot Running...")
 
-    app.run_polling()
+    PORT = int(os.environ.get("PORT", 8443))
+    RENDER_URL = os.environ.get("RENDER_EXTERNAL_URL")
+
+    if RENDER_URL:
+        # Webhook mode (used when deployed on Render)
+        app.run_webhook(
+            listen="0.0.0.0",
+            port=PORT,
+            url_path=BOT_TOKEN,
+            webhook_url=f"{RENDER_URL}/{BOT_TOKEN}",
+        )
+    else:
+        # Polling mode (used when running locally)
+        app.run_polling()
 
 
 if __name__ == "__main__":
